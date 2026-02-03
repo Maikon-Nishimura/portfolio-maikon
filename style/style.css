@@ -1,32 +1,27 @@
-/* =========================================
-   STYLE GUIDE (Baseado na imagem fornecida)
-   ========================================= */
 
 :root {
-    /* --- Cores Principais (Brand Colors) --- */
+   
     --red: #E3646E;
     --purple: #BB72E9;
     --blue: #3996DB;
     --green: #82BC4F;
     --yellow: #EABD5F;
 
-    /* --- Base (Grays) --- */
-    --gray-100: #E2E4E9; /* Títulos Claros */
-    --gray-200: #C0C4CE; /* Texto Corrido */
-    --gray-300: #878EA1; /* Subtítulos / Detalhes */
-    --gray-400: #292C34; /* Fundo de Cards */
-    --gray-500: #16181D; /* Fundo da Página (Body) */
-    --gray-600: #0D0E11; /* Detalhes mais escuros */
+  
+    --gray-100: #E2E4E9; 
+    --gray-200: #C0C4CE; 
+    --gray-300: #878EA1; 
+    --gray-400: #292C34; 
+    --gray-500: #16181D; 
+    --gray-600: #0D0E11; 
 
-    /* --- Fontes --- */
+    
     --font-title: 'Maven Pro', sans-serif;
     --font-subtitle: 'Inconsolata', monospace;
     --font-body: 'Asap', sans-serif;
 }
 
-/* =========================================
-   RESET E GERAL
-   ========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -34,8 +29,8 @@
 }
 
 body {
-    background-color: var(--gray-500); /* Cor exata do Style Guide */
-    color: var(--gray-200);            /* Cor exata do texto */
+    background-color: var(--gray-500);
+    color: var(--gray-200);
     font-family: var(--font-body);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -58,45 +53,37 @@ a {
     text-align: center;
 }
 
-/* =========================================
-   TIPOGRAFIA (Conforme Style Guide)
-   ========================================= */
-
-/* Title lg (56px) - Usado no H1 */
 h1 {
     font-family: var(--font-title);
-    font-size: 56px; /* 3.5rem */
+    font-size: 56px;
     font-weight: 700;
     color: var(--gray-100);
     line-height: 120%;
     margin-bottom: 24px;
 }
 
-/* Title md (24px) - Usado no H2 */
 h2 {
     font-family: var(--font-title);
-    font-size: 24px; /* 1.5rem */
+    font-size: 24px;
     font-weight: 700;
     color: var(--gray-100);
     line-height: 120%;
     margin-bottom: 40px;
 }
 
-/* Title sm (16px) - Usado nos Cards */
 h3 {
     font-family: var(--font-title);
-    font-size: 16px; /* 1rem */
+    font-size: 16px;
     font-weight: 700;
     color: var(--gray-100);
     line-height: 120%;
 }
 
-/* Subtitle (20px) - Inconsolata */
 .subtitle {
     font-family: var(--font-subtitle);
     font-size: 20px;
     font-weight: 400;
-    color: var(--gray-200); /* Ajustado para Gray-200 ou 300 */
+    color: var(--gray-200);
     line-height: 120%;
     margin-bottom: 8px;
 }
@@ -104,33 +91,27 @@ h3 {
 .description {
     max-width: 700px;
     margin: 0 auto 40px;
-    font-size: 16px; /* Text md */
-    color: var(--gray-300); /* Um pouco mais escuro que o título */
+    font-size: 16px;
+    color: var(--gray-300);
 }
 
-/* Destaque em Vermelho */
 .highlight-red {
     color: var(--red);
 }
 
-/* Labels de Seção (Inconsolata Red) */
 .section-label {
     font-family: var(--font-subtitle);
     color: var(--red);
-    font-size: 14px; /* Text sm */
+    font-size: 14px;
     display: block;
     margin-bottom: 8px;
-    
 }
 
-/* =========================================
-   HEADER / HERO SECTION
-   ========================================= */
+
 header {
     padding: 100px 0 60px;
     
-    /* BACKGROUND: Caminho corrigido para sair da pasta style (../) */
-    background-image: url('../images/assets/fundo-topo.png'); 
+    background-image: url('images/assets/fundo-topo.png'); 
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% auto;
@@ -148,7 +129,7 @@ header {
     height: 100%;
     border-radius: 50%;
     padding: 3px;
-    border: 2px solid var(--red); /* Borda vermelha exata */
+    border: 2px solid var(--red);
     object-fit: cover;
 }
 
@@ -160,7 +141,7 @@ header {
     height: 32px;
 }
 
-/* --- TAGS (Pills) --- */
+
 .tags-container {
     display: flex;
     justify-content: center;
@@ -170,11 +151,11 @@ header {
 }
 
 .tag {
-    background-color: var(--gray-400); /* Cor do card */
+    background-color: var(--gray-400);
     padding: 8px 24px;
     border-radius: 50px;
     font-family: var(--font-subtitle);
-    font-size: 14px; /* Text sm */
+    font-size: 14px;
     color: var(--gray-100);
     display: flex;
     align-items: center;
@@ -189,7 +170,7 @@ header {
 }
 
 .tag:hover {
-    background-color: var(--gray-300); /* Leve destaque no hover */
+    background-color: var(--gray-300);
 }
 
 .scroll-icon {
@@ -205,91 +186,83 @@ header {
     60% {transform: translateY(-5px);}
 }
 
-/* =========================================
-   PROJETOS (Cards)
-   ========================================= */
+
 #projects {
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 .projects-grid {
     display: grid;
+   
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    gap: 32px; 
+    
+    
+    justify-content: center; 
+    margin: 0 auto;
 }
 
-/* Componente: Project Card (Conforme Style Guide) */
+
 .project-card {
-    background-color: var(--gray-400); /* #292C34 */
+    display: block; 
+    background-color: var(--gray-400); 
     border-radius: 12px;
-    border: 1px solid var(--gray-400); /* Borda inicial igual ao fundo */
+    border: 1px solid var(--gray-400); 
     text-align: left;
     overflow: hidden;
-    transition: border-color 0.3s;
+    transition: transform 0.3s, border-color 0.3s;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .project-card:hover {
-    border-color: var(--gray-300); /* Borda acende levemente no hover */
+    border-color: var(--gray-300);
+    transform: translateY(-5px); 
 }
 
 .project-card .image-wrapper {
     width: 100%;
-    height: 160px;
+    height: 180px;
     overflow: hidden;
-    background-color: var(--gray-600); /* Fundo enquanto carrega img */
+    background-color: var(--gray-600);
 }
 
 .project-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
+    object-fit: cover; 
+    object-position: top center; 
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.2); 
 }
 
 .card-content {
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.card-content h3 {
-    margin-bottom: 8px;
-    color: var(--gray-100);
-}
 
-.card-content p {
-    font-family: var(--font-body);
-    font-size: 14px; /* Text sm */
-    color: var(--gray-200);
-    line-height: 140%;
-}
-
-/* =========================================
-   SERVIÇOS
-   ========================================= */
 #services {
-    /* CORREÇÃO: A cor de fundo vem AQUI para pegar a tela toda */
-    background-color: var(--gray-600); /* #0D0E11 */
+    background-color: var(--gray-600);
     width: 100%;
-    
-    padding: 80px 0; /* Aumentei o padding para dar respiro vertical */
+    padding: 80px 0;
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
-    
-    /* REMOVIDO: background-color daqui, pois a grid é limitada pelo container */
+
 }
 
 .service-card {
-    /* O card continua com a cor de fundo para se mesclar */
-    background-color: var(--gray-600); 
-    
-    border: 1px solid var(--gray-400); 
+    background-color: var(--gray-600);
+    border: 1px solid var(--gray-400);
     border-radius: 12px;
     padding: 32px;
     display: flex;
@@ -318,14 +291,11 @@ header {
     color: var(--gray-200);
 }
 
-/* =========================================
-   CONTATO (Rodapé)
-   ========================================= */
+
 #contact {
     padding: 80px 0 120px;
     
-    /* BACKGROUND: Caminho corrigido para sair da pasta style (../) */
-    background-image: url('../images/assets/fundo-contato.png');
+    background-image: url('images/assets/fundo-contato.png');
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100% auto;
@@ -344,35 +314,31 @@ header {
     margin: 0 auto;
 }
 
-/* Componente: Social Button (Conforme Style Guide) */
+
 .contact-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    background-color: var(--gray-400); /* #292C34 */
-    border: 1px solid var(--gray-400); /* Borda padrão */
-    
+    background-color: var(--gray-400);
+
+    border: 1px solid var(--gray-400);
+
     padding: 20px;
+
     border-radius: 8px;
-    text-decoration: none;
-    
+
     font-family: var(--font-title);
     font-size: 16px;
     color: var(--gray-200);
-    
+
     transition: 0.2s;
 }
 
 .contact-btn:hover {
-    background-color: var(--gray-400); /* Mantém fundo */
-    border-color: var(--blue);         /* Borda Azul no hover (exemplo) ou Gray-200 */
+    border-color: var(--blue);
     color: var(--gray-100);
 }
 
-/* Caso queira a cor exata do hover da imagem para cada botão, podemos customizar, 
-   mas o padrão geralmente é clarear a borda */
-   
 .btn-left {
     display: flex;
     align-items: center;
@@ -384,24 +350,19 @@ header {
     height: 24px;
 }
 
-/* Seta do botão */
 .contact-btn i {
-    color: var(--blue); /* #3996DB */
+    color: var(--blue);
     font-size: 20px;
 }
 
-/* =========================================
-   RESPONSIVIDADE
-   ========================================= */
+
 @media (max-width: 768px) {
-    h1 { font-size: 32px; } /* Ajuste mobile */
+    h1 { font-size: 32px; }
     h2 { font-size: 20px; }
     
-    header {
-        background-size: cover; /* Ajusta fundo no mobile */
-    }
+    header { background-size: cover; }
+    #contact { background-size: cover; }
     
-    #contact {
-        background-size: cover;
-    }
+    .tags-container { gap: 8px; }
+    .tag { padding: 6px 16px; font-size: 12px; }
 }
