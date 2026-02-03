@@ -1,13 +1,12 @@
-
 :root {
-   
+    
     --red: #E3646E;
     --purple: #BB72E9;
     --blue: #3996DB;
     --green: #82BC4F;
     --yellow: #EABD5F;
 
-  
+    
     --gray-100: #E2E4E9; 
     --gray-200: #C0C4CE; 
     --gray-300: #878EA1; 
@@ -15,12 +14,11 @@
     --gray-500: #16181D; 
     --gray-600: #0D0E11; 
 
-    
+   
     --font-title: 'Maven Pro', sans-serif;
     --font-subtitle: 'Inconsolata', monospace;
     --font-body: 'Asap', sans-serif;
 }
-
 
 * {
     margin: 0;
@@ -52,6 +50,7 @@ a {
     padding: 0 24px;
     text-align: center;
 }
+
 
 h1 {
     font-family: var(--font-title);
@@ -110,18 +109,24 @@ h3 {
 
 header {
     padding: 100px 0 60px;
-    
-    background-image: url('images/assets/fundo-topo.png'); 
+    background-image: url('../images/assets/fundo-topo.png'); 
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100% auto;
+}
+
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-avatar {
     position: relative;
     width: 120px;
     height: 120px;
-    margin: 0 auto 32px;
+    margin: 0 auto 32px; 
 }
 
 .avatar-img {
@@ -193,15 +198,13 @@ header {
 
 .projects-grid {
     display: grid;
-   
+    
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px; 
-    
     
     justify-content: center; 
     margin: 0 auto;
 }
-
 
 .project-card {
     display: block; 
@@ -257,7 +260,6 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
-
 }
 
 .service-card {
@@ -295,7 +297,7 @@ header {
 #contact {
     padding: 80px 0 120px;
     
-    background-image: url('images/assets/fundo-contato.png');
+    background-image: url('../images/assets/fundo-contato.png');
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 100% auto;
@@ -314,23 +316,17 @@ header {
     margin: 0 auto;
 }
 
-
 .contact-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--gray-400);
-
     border: 1px solid var(--gray-400);
-
     padding: 20px;
-
     border-radius: 8px;
-
     font-family: var(--font-title);
     font-size: 16px;
     color: var(--gray-200);
-
     transition: 0.2s;
 }
 
